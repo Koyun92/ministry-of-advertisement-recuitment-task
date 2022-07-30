@@ -48,6 +48,7 @@ h3 {
   margin: auto;
   -webkit-filter: drop-shadow(0 0 10.5px rgba(28, 29, 29, 0.27));
           filter: drop-shadow(0 0 10.5px rgba(28, 29, 29, 0.27));
+  background-color: #ffffff;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 27rem 1fr 1fr 1fr;
