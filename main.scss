@@ -29,13 +29,15 @@ h3{
     font-weight: 400; 
 }
 .button{
-    padding: 1rem 3rem;
+    
+   padding: 1rem 3rem ;
     font-size: 1.8rem;
       font-weight: 400;
     border-radius: 2.4rem;
     border: 3px solid #e5007d;
     background-color: #eff3f6;
     color: #e5007d; 
+    transition: .3s;
   
     cursor: pointer;
     &:hover{
@@ -48,6 +50,7 @@ h3{
 .cta-card{
 
     margin: auto;
+    filter: drop-shadow(0 0 10.5px rgba(28,29,29,0.27));
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 27rem 1fr 1fr 1fr;
     grid-template-rows: 1fr 44.3rem 1fr  1fr;
@@ -55,7 +58,7 @@ h3{
     height: 114.8rem;
     text-align: center;
     border: 2px solid #06b7e2;
-    filter: drop-shadow(0 0 10.5px rgba(28,29,29,0.27));
+   
     &__header{
         grid-column: 4/5;
         display: flex;
@@ -97,10 +100,13 @@ h3{
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        
        
     }
     &__img{
-        max-width: 30%;
+        grid-column: 1/2;
+        grid-row: 6/7;
+        width: 8.6rem;
     }
     &__aside{
        grid-column: 1/8;
@@ -113,24 +119,37 @@ h3{
        background-position: center;
     }
     &__subtitle{
+        grid-column: 2/3;
         font-size: 2.4rem;
         max-width: 27rem;
         letter-spacing: .1rem;
         line-height: 2.2rem;
         color: #06b7e2;
-        font-weight: 400;
-font-family: "Lexend Deca";
+       
+
 
     }
 
 }
 @media(min-width:1200px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 2rem;
+    }
    .cta-card{
     text-align: left;
     max-width: 1400px;
     max-height: 658px;
     grid-template-rows: 1fr 1fr 1fr 12rem 12rem 12rem 1fr;
-    grid-template-columns:12rem 1fr 24rem 1fr 24rem 1fr 50%;
+    grid-template-columns:2fr 1fr 24rem 1fr 24rem 1fr 50%;
+    &__title{
+        font-size: 3.8rem;
+        line-height: 5.2rem;
+    }
     &__header{
         grid-column: 3/6;
         grid-row: 2/3;
@@ -139,15 +158,22 @@ font-family: "Lexend Deca";
         display: grid;
         grid-column: 3/6;
         grid-row: 4/6;
-        grid-template-columns: subgrid;
-        grid-template-rows: subgrid;
+        min-height:0;
+        grid-template-columns: 24rem 1fr 24rem;
+      
+       
+        // grid-template-columns: subgrid;
+        // grid-template-rows: subgrid;
     }
   
    
     &__copy{
         &:nth-child(1){
-            grid-column: 1/2;
+            
+            grid-column: 1/3;
             grid-row: 1/2;
+            font-size: 1.5rem;
+            line-height: 3.2rem;
         }
         &:nth-child(2){
             display: flex;
@@ -170,20 +196,30 @@ font-family: "Lexend Deca";
     }
     &__actions{
         display: grid;
-        grid-template-columns: subgrid;
-        grid-template-rows: subgrid;
+        grid-template-columns: 24rem 1fr 24rem;
+       
         grid-column: 3/6;
         grid-row: 6/7;
+        align-items: end;
+        justify-items: start;
     }
     &__button{
         
-        grid-column: 3/6;
-        grid-row: 6/7;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        
+    }
+    &__img{
+        
+        grid-column: 1/2;
+        grid-row: 1/2;
+       
     }
     &__aside{
         display: grid;
-        grid-template-rows: subgrid;
-        
+        grid-template-rows: 1fr 1fr 1fr 12rem 12rem 12rem 1fr;
+        align-items: end;
+        background-image: url("../img/psi-balagan-desktop.png");
         grid-column: 7/8;
         grid-row: 1/8;
     }
@@ -191,6 +227,7 @@ font-family: "Lexend Deca";
         max-width: none;
         grid-row: 6/7;
         grid-column: 7/8;
+       
     }
     }
    
